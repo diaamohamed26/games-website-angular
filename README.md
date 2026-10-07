@@ -1,59 +1,233 @@
-# GamesWebsite
+# 🎮 Games Website — Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.21.
+A modern and responsive games website built with **Angular 21**, designed to provide a clean and interactive gaming experience.
 
-## Development server
+## 🌐 Live Demo
 
-To start a local development server, run:
+🚀 **Live Website:**
+https://diaamohamed26.github.io/games-website-angular/
+
+## 📌 Project Overview
+
+Games Website is a modern frontend application built with Angular.
+The project focuses on creating a responsive gaming platform with a clean UI, reusable components, and a smooth user experience.
+
+## ✨ Features
+
+* 🎮 Modern games website interface
+* 📱 Fully responsive design
+* 🏠 Home page
+* 🎯 Games browsing
+* 🔍 Search functionality
+* 🖼️ Game cards and game information
+* ⚡ Fast Angular application
+* 🎨 Bootstrap and custom SCSS styling
+* 📦 Reusable Angular components
+* 🚀 Deployed with GitHub Pages
+* 🔒 HTTPS enabled through GitHub Pages
+
+## 🛠️ Technologies
+
+* **Angular 21**
+* **TypeScript**
+* **SCSS**
+* **Bootstrap**
+* **Bootstrap Icons**
+* **RxJS**
+* **Vitest**
+* **GitHub Pages**
+* **GitHub Actions**
+
+## 📂 Project Structure
+
+```text
+games-website-angular/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── public/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── ...
+│   │
+│   ├── assets/
+│   ├── styles.scss
+│   └── main.ts
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have:
+
+* Node.js 22 LTS
+* npm
+* Angular CLI
+
+Check your versions:
+
+```bash
+node -v
+npm -v
+ng version
+```
+
+## 📥 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/diaamohamed26/games-website-angular.git
+```
+
+Navigate to the project:
+
+```bash
+cd games-website-angular
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## 💻 Development Server
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application will automatically reload when source files are changed.
+
+## 🏗️ Production Build
+
+Build the project for production:
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
-
-To build the project run:
+For GitHub Pages:
 
 ```bash
-ng build
+npm run build -- --base-href /games-website-angular/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The production files are generated inside:
 
-## Running unit tests
+```text
+dist/games-website/browser/
+```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 🚀 Deployment
+
+The project uses **GitHub Actions** to automatically deploy the Angular application to GitHub Pages.
+
+Deployment workflow:
+
+```text
+Push to main
+     ↓
+GitHub Actions
+     ↓
+Install dependencies
+     ↓
+Build Angular application
+     ↓
+Create GitHub Pages artifact
+     ↓
+Deploy
+     ↓
+Live Website
+```
+
+### GitHub Pages URL
+
+```text
+https://diaamohamed26.github.io/games-website-angular/
+```
+
+Every push to the `main` branch can trigger a new deployment through GitHub Actions.
+
+## 🧪 Testing
+
+Run unit tests with:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+The project uses **Vitest** as the test runner.
 
-For end-to-end (e2e) testing, run:
+## 🧹 Code Scaffolding
+
+Angular CLI can generate new components, services, and other project files.
+
+Generate a component:
 
 ```bash
-ng e2e
+ng generate component component-name
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Generate a service:
 
-## Additional Resources
+```bash
+ng generate service service-name
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For more Angular CLI commands:
+
+```bash
+ng generate --help
+```
+
+## 📦 Build Configuration
+
+The production configuration includes:
+
+* Optimized JavaScript
+* Optimized CSS
+* Disabled Google Fonts build-time inlining
+* Production bundle budgets
+* Output hashing
+* GitHub Pages base URL
+
+## 🔗 Repository
+
+**GitHub:**
+https://github.com/diaamohamed26/games-website-angular
+
+**Live Demo:**
+https://diaamohamed26.github.io/games-website-angular/
+
+## 👨‍💻 Author
+
+**Diaa Mohamed**
+
+* GitHub: https://github.com/diaamohamed26
+* LinkedIn: https://linkedin.com/in/diaa-mohamed-a50460125
+
+## 📄 License
+
+This project is available for educational and portfolio purposes.
