@@ -1,0 +1,77 @@
+<div class="game-card">
+
+  <!-- Game Image -->
+  <div class="game-image">
+
+    <img
+      [src]="image"
+      [alt]="title"
+      loading="lazy"
+    />
+
+    <div class="image-overlay"></div>
+
+    <!-- Favorite -->
+    <button
+      type="button"
+      class="favorite-button"
+      aria-label="Add to favorites"
+    >
+      <i class="bi bi-heart"></i>
+    </button>
+
+    <!-- Category -->
+    <span class="game-badge">
+      {{ category }}
+    </span>
+
+    <!-- Play -->
+    <button
+      type="button"
+      class="play-button"
+      aria-label="Play game"
+    >
+      <i class="bi bi-play-fill"></i>
+    </button>
+
+  </div>
+
+  <!-- Game Information -->
+  <div class="game-content">
+
+    <div class="game-title-row">
+
+      <div class="game-info">
+
+        <h5>
+          {{ title }}
+        </h5>
+
+        <div class="game-meta">
+
+          <span class="rating">
+            <i class="bi bi-star-fill"></i>
+            {{ rating }}
+          </span>
+
+          <span class="separator">
+            •
+          </span>
+
+          <span>
+            {{ category }}
+          </span>
+
+        </div>
+
+      </div>
+
+      <span class="game-price">
+        {{ price }}
+      </span>
+
+    </div>
+
+  </div>
+
+</div>

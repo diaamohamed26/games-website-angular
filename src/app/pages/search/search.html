@@ -1,0 +1,63 @@
+<section class="search-page">
+
+  <div class="container">
+
+    <div class="search-header">
+
+      <span class="section-label">
+        GAMEHUB SEARCH
+      </span>
+
+      <h1>
+        Find Your Next Game
+      </h1>
+
+      <p>
+        Search through our game library and discover something new.
+      </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+      <i class="bi bi-search"></i>
+
+      <input
+        type="text"
+        placeholder="Search games..."
+        [(ngModel)]="searchQuery"
+      />
+
+      <button type="button">
+        Search
+      </button>
+
+    </div>
+
+
+    <div class="search-empty">
+
+      <i class="bi bi-controller"></i>
+
+      <h3>
+        Start searching
+      </h3>
+
+      <p>
+        Enter a game name, genre, or category above.
+      </p>
+
+      <a
+        routerLink="/games"
+        class="btn-primary-custom"
+      >
+        Browse All Games
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

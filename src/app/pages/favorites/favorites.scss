@@ -1,0 +1,86 @@
+.favorites-page {
+  min-height: 100vh;
+  padding: 160px 0 100px;
+  background: #08090d;
+}
+
+.favorites-header {
+  text-align: center;
+}
+
+.section-label {
+  color: #8b5cf6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.favorites-header h1 {
+  margin: 12px 0;
+  color: #fff;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.favorites-header p {
+  color: #6b7280;
+}
+
+.favorites-empty {
+  max-width: 600px;
+
+  margin: 70px auto 0;
+  padding: 70px 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+
+  background: #11131a;
+
+  text-align: center;
+}
+
+.empty-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background: rgba(139, 92, 246, 0.1);
+
+  color: #8b5cf6;
+
+  font-size: 30px;
+}
+
+.favorites-empty h3 {
+  color: #fff;
+}
+
+.favorites-empty p {
+  color: #6b7280;
+}
+
+.btn-primary-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+  padding: 13px 20px;
+
+  border-radius: 11px;
+
+  background: #8b5cf6;
+  color: #fff;
+
+  text-decoration: none;
+  font-weight: 700;
+}

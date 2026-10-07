@@ -1,0 +1,539 @@
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero">
+
+  <div class="hero-glow hero-glow-one"></div>
+  <div class="hero-glow hero-glow-two"></div>
+
+  <div class="hero-background"></div>
+
+  <div class="container hero-content">
+
+    <div class="row align-items-center">
+
+      <!-- HERO CONTENT -->
+      <div class="col-lg-7">
+
+        <div class="hero-label">
+          <span class="label-dot"></span>
+
+          <i class="bi bi-stars"></i>
+
+          THE FUTURE OF GAMING
+        </div>
+
+        <h1>
+          Discover Your
+          <span>Next Adventure.</span>
+        </h1>
+
+        <p class="hero-description">
+          Explore a world of incredible games, discover new adventures,
+          and find your next favorite gaming experience.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            routerLink="/games"
+            class="btn-primary-custom"
+          >
+            <span>Explore Games</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <a
+            routerLink="/games"
+            class="btn-secondary-custom"
+          >
+            <i class="bi bi-controller"></i>
+            <span>Browse Library</span>
+          </a>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="hero-stats">
+
+          <div class="hero-stat">
+            <strong>10K<span>+</span></strong>
+            <small>Games</small>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="hero-stat">
+            <strong>2M<span>+</span></strong>
+            <small>Players</small>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="hero-stat">
+            <strong>150<span>+</span></strong>
+            <small>Categories</small>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- HERO VISUAL -->
+      <div class="col-lg-5 d-none d-lg-block">
+
+        <div class="hero-visual">
+
+          <div class="visual-glow"></div>
+
+          <div class="floating-card card-one">
+            <i class="bi bi-controller"></i>
+            <div>
+              <strong>10K+</strong>
+              <span>Games Available</span>
+            </div>
+          </div>
+
+          <div class="floating-card card-two">
+            <div class="mini-rating">
+              <i class="bi bi-star-fill"></i>
+              4.9
+            </div>
+
+            <span>Top Rated</span>
+          </div>
+
+          <div class="hero-controller">
+            <i class="bi bi-controller"></i>
+          </div>
+
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="hero-scroll">
+    <span>SCROLL TO EXPLORE</span>
+    <i class="bi bi-arrow-down"></i>
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED GAMES
+========================= -->
+<section class="games-section" id="games">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+        <span class="section-label">
+          FEATURED
+        </span>
+
+        <h2>
+          Featured Games
+        </h2>
+
+        <p>
+          Hand-picked games worth playing right now.
+        </p>
+      </div>
+
+      <a
+        routerLink="/games"
+        class="view-all-link"
+      >
+        View All Games
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      @for (game of featuredGames; track game.id) {
+
+        <div class="col-12 col-sm-6 col-lg-3">
+
+          <a
+            class="home-game-link"
+            [routerLink]="['/games', game.id]"
+          >
+
+            <app-game-card
+              [title]="game.title"
+              [category]="game.category"
+              [rating]="game.rating"
+              [price]="game.price"
+              [image]="game.image"
+            />
+
+          </a>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+<section
+  class="categories-section"
+  id="categories"
+>
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+        <span class="section-label">
+          EXPLORE
+        </span>
+
+        <h2>
+          Browse Categories
+        </h2>
+
+        <p>
+          Find your perfect gaming experience.
+        </p>
+      </div>
+
+      <a
+        routerLink="/games"
+        class="view-all-link"
+      >
+        All Games
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="row g-3">
+
+      <!-- ACTION -->
+      <div class="col-6 col-md-4 col-lg">
+
+        <a
+          routerLink="/games"
+          class="category-card"
+        >
+
+          <div class="category-icon">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+
+          <div>
+            <span>Action</span>
+            <small>1,240 Games</small>
+          </div>
+
+          <i class="bi bi-arrow-up-right category-arrow"></i>
+
+        </a>
+
+      </div>
+
+
+      <!-- RPG -->
+      <div class="col-6 col-md-4 col-lg">
+
+        <a
+          routerLink="/games"
+          class="category-card"
+        >
+
+          <div class="category-icon">
+            <i class="bi bi-stars"></i>
+          </div>
+
+          <div>
+            <span>RPG</span>
+            <small>890 Games</small>
+          </div>
+
+          <i class="bi bi-arrow-up-right category-arrow"></i>
+
+        </a>
+
+      </div>
+
+
+      <!-- RACING -->
+      <div class="col-6 col-md-4 col-lg">
+
+        <a
+          routerLink="/games"
+          class="category-card"
+        >
+
+          <div class="category-icon">
+            <i class="bi bi-car-front-fill"></i>
+          </div>
+
+          <div>
+            <span>Racing</span>
+            <small>420 Games</small>
+          </div>
+
+          <i class="bi bi-arrow-up-right category-arrow"></i>
+
+        </a>
+
+      </div>
+
+
+      <!-- SPORTS -->
+      <div class="col-6 col-md-4 col-lg">
+
+        <a
+          routerLink="/games"
+          class="category-card"
+        >
+
+          <div class="category-icon">
+            <i class="bi bi-trophy-fill"></i>
+          </div>
+
+          <div>
+            <span>Sports</span>
+            <small>630 Games</small>
+          </div>
+
+          <i class="bi bi-arrow-up-right category-arrow"></i>
+
+        </a>
+
+      </div>
+
+
+      <!-- STRATEGY -->
+      <div class="col-6 col-md-4 col-lg">
+
+        <a
+          routerLink="/games"
+          class="category-card"
+        >
+
+          <div class="category-icon">
+            <i class="bi bi-shield-fill"></i>
+          </div>
+
+          <div>
+            <span>Strategy</span>
+            <small>510 Games</small>
+          </div>
+
+          <i class="bi bi-arrow-up-right category-arrow"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TRENDING
+========================= -->
+<section
+  class="games-section trending-section"
+  id="trending"
+>
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+        <span class="section-label">
+          TRENDING NOW
+        </span>
+
+        <h2>
+          Most Played Games
+        </h2>
+
+        <p>
+          See what everyone is playing right now.
+        </p>
+      </div>
+
+      <a
+        routerLink="/games"
+        class="view-all-link"
+      >
+        View All Games
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      @for (game of trendingGames; track game.id) {
+
+        <div class="col-12 col-sm-6 col-lg-3">
+
+          <a
+            class="home-game-link"
+            [routerLink]="['/games', game.id]"
+          >
+
+            <app-game-card
+              [title]="game.title"
+              [category]="game.category"
+              [rating]="game.rating"
+              [price]="game.price"
+              [image]="game.image"
+            />
+
+          </a>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     NEW RELEASES
+========================= -->
+<section
+  class="games-section new-releases-section"
+  id="new-releases"
+>
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+        <span class="section-label">
+          JUST RELEASED
+        </span>
+
+        <h2>
+          New Releases
+        </h2>
+
+        <p>
+          Fresh games waiting for you.
+        </p>
+      </div>
+
+      <a
+        routerLink="/games"
+        class="view-all-link"
+      >
+        View All Games
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      @for (game of newReleases; track game.id) {
+
+        <div class="col-12 col-sm-6 col-lg-3">
+
+          <a
+            class="home-game-link"
+            [routerLink]="['/games', game.id]"
+          >
+
+            <app-game-card
+              [title]="game.title"
+              [category]="game.category"
+              [rating]="game.rating"
+              [price]="game.price"
+              [image]="game.image"
+            />
+
+          </a>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta-section">
+
+  <div class="container">
+
+    <div class="cta-card">
+
+      <div class="cta-glow"></div>
+
+      <div class="cta-content">
+
+        <span class="cta-label">
+          READY TO PLAY?
+        </span>
+
+        <h2>
+          Your next adventure
+          <span>starts here.</span>
+        </h2>
+
+        <p>
+          Discover thousands of games and find something
+          you'll love to play.
+        </p>
+
+      </div>
+
+      <a
+        routerLink="/games"
+        class="btn-primary-custom"
+      >
+        Browse All Games
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

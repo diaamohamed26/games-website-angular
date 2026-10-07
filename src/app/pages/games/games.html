@@ -1,0 +1,117 @@
+<section class="games-page">
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="games-header">
+
+      <div>
+        <span class="section-label">
+          GAME LIBRARY
+        </span>
+
+        <h1>
+          Explore Games
+        </h1>
+
+        <p>
+          Discover your next favorite game from our growing collection.
+        </p>
+      </div>
+
+      <div class="games-count">
+        <strong>{{ filteredGames.length }}</strong>
+        <span>Games</span>
+      </div>
+
+    </div>
+
+
+    <!-- Filters -->
+    <div class="games-toolbar">
+
+      <div class="category-filters">
+
+        @for (category of categories; track category) {
+
+          <button
+            type="button"
+            [class.active]="selectedCategory === category"
+            (click)="selectCategory(category)"
+          >
+            {{ category }}
+          </button>
+
+        }
+
+      </div>
+
+
+      <button
+        type="button"
+        class="sort-button"
+      >
+        <i class="bi bi-filter"></i>
+        Sort
+        <i class="bi bi-chevron-down"></i>
+      </button>
+
+    </div>
+
+
+    <!-- Games Grid -->
+    <div class="row g-4">
+
+      @for (game of filteredGames; track game.id) {
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+
+          <div class="game-item">
+
+            <app-game-card
+              [title]="game.title"
+              [category]="game.genre"
+              [rating]="game.rating"
+              [price]="game.price"
+              [image]="game.image"
+            />
+
+            <a
+              class="details-link"
+              [routerLink]="['/games', game.id]"
+            >
+              View Details
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+
+    <!-- Empty State -->
+    @if (filteredGames.length === 0) {
+
+      <div class="empty-state">
+
+        <i class="bi bi-controller"></i>
+
+        <h3>
+          No games found
+        </h3>
+
+        <p>
+          Try selecting another category.
+        </p>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

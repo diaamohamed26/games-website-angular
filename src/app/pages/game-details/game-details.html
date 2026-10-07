@@ -1,0 +1,270 @@
+@if (game) {
+
+  <main class="game-details-page">
+
+    <!-- Hero -->
+    <section
+      class="details-hero"
+      [style.background-image]="'url(' + game.image + ')'"
+    >
+
+      <div class="details-overlay"></div>
+
+      <div class="container details-content">
+
+        <a
+          routerLink="/games"
+          class="back-link"
+        >
+          <i class="bi bi-arrow-left"></i>
+          Back to Games
+        </a>
+
+
+        <div class="details-main">
+
+          <div class="details-info">
+
+            <span class="details-category">
+              {{ game.category }}
+            </span>
+
+            <h1>
+              {{ game.title }}
+            </h1>
+
+            <p class="details-description">
+              {{ game.description }}
+            </p>
+
+
+            <div class="details-rating">
+
+              <div class="rating-box">
+                <i class="bi bi-star-fill"></i>
+                <strong>{{ game.rating }}</strong>
+              </div>
+
+              <span>
+                {{ game.reviews }} Reviews
+              </span>
+
+            </div>
+
+
+            <div class="details-actions">
+
+              <button
+                type="button"
+                class="buy-button"
+              >
+                <i class="bi bi-cart3"></i>
+                Buy Now
+                <strong>{{ game.price }}</strong>
+              </button>
+
+              <button
+                type="button"
+                class="wishlist-button"
+              >
+                <i class="bi bi-heart"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Information -->
+    <section class="details-information">
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+
+            <div class="content-card">
+
+              <span class="section-label">
+                ABOUT THE GAME
+              </span>
+
+              <h2>
+                Experience {{ game.title }}
+              </h2>
+
+              <p>
+                {{ game.description }}
+              </p>
+
+              <p>
+                Explore a detailed world filled with unique
+                gameplay mechanics, memorable characters,
+                challenging missions, and countless hours of
+                entertainment.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-lg-4">
+
+            <div class="specs-card">
+
+              <h3>
+                Game Information
+              </h3>
+
+
+              <div class="spec-row">
+
+                <span>
+                  Release Date
+                </span>
+
+                <strong>
+                  {{ game.releaseDate }}
+                </strong>
+
+              </div>
+
+
+              <div class="spec-row">
+
+                <span>
+                  Developer
+                </span>
+
+                <strong>
+                  {{ game.developer }}
+                </strong>
+
+              </div>
+
+
+              <div class="spec-row">
+
+                <span>
+                  Publisher
+                </span>
+
+                <strong>
+                  {{ game.publisher }}
+                </strong>
+
+              </div>
+
+
+              <div class="spec-row">
+
+                <span>
+                  Genre
+                </span>
+
+                <strong>
+                  {{ game.category }}
+                </strong>
+
+              </div>
+
+
+              <div class="spec-row">
+
+                <span>
+                  Platforms
+                </span>
+
+                <strong>
+                  {{ game.platform }}
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="details-cta">
+
+      <div class="container">
+
+        <div class="cta-card">
+
+          <div>
+
+            <span>
+              READY TO PLAY?
+            </span>
+
+            <h2>
+              Start your adventure.
+            </h2>
+
+            <p>
+              Get {{ game.title }} today.
+            </p>
+
+          </div>
+
+          <button
+            type="button"
+            class="btn-primary-custom"
+          >
+            Buy {{ game.price }}
+            <i class="bi bi-arrow-right"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+}
+@else {
+
+  <main class="not-found">
+
+    <div class="container">
+
+      <i class="bi bi-controller"></i>
+
+      <h1>
+        Game Not Found
+      </h1>
+
+      <p>
+        The game you're looking for doesn't exist.
+      </p>
+
+      <a
+        routerLink="/games"
+        class="btn-primary-custom"
+      >
+        Browse Games
+      </a>
+
+    </div>
+
+  </main>
+
+}
